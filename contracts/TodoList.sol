@@ -51,16 +51,16 @@ contract TodoList {
     function toggleCompleted(uint _id) public {
         // Make sure the todo exists
         require(_id > 0 && _id <= todoCount, "Todo does not exist");
-        
+
         // Get the todo
         Todo memory _todo = todos[_id];
-        
+
         // Toggle the completed status
         _todo.completed = !_todo.completed;
-        
+
         // Update the todo
         todos[_id] = _todo;
-        
+
         // Emit an event
         emit TodoCompleted(_id, _todo.completed);
     }
@@ -72,10 +72,10 @@ contract TodoList {
     function deleteTodo(uint _id) public onlyOwner {
         // Make sure the todo exists
         require(_id > 0 && _id <= todoCount, "Todo does not exist");
-        
+
         // Delete the todo
         delete todos[_id];
-        
+
         // Emit an event
         emit TodoDeleted(_id);
     }

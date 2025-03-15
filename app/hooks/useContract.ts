@@ -3,13 +3,13 @@ import { useState, useEffect } from "react";
 import { ethers, BrowserProvider } from "ethers";
 import TodoABI from "../lib/abi/TodoList.json";
 import { TodoItem } from "../../types/contract";
-import { CONTRACT_ADDRESS } from "@/types/contactAddress";
 
 export function useContract() {
   const [contract, setContract] = useState<ethers.Contract | null>(null);
   const [todos, setTodos] = useState<TodoItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const CONTRACT_ADDRESS = "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266";
 
   useEffect(() => {
     const initContract = async () => {

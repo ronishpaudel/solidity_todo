@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useContract } from "../hooks/useContract";
-import { TodoItem } from "@/types/contract";
+import React from "react";
+import { TodoItem } from "../../types/contract";
 
 interface TodoListProps {
   todos: TodoItem[];
