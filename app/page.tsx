@@ -6,6 +6,7 @@ import { CreateTodoForm } from "./components/CreateTodoForm";
 import { TodoList } from "./components/TodoList";
 import { useWallet } from "./hooks/useWallet";
 import { useContract } from "./hooks/useContract";
+import React from "react";
 
 export default function Home() {
   const { isConnected } = useWallet();

@@ -1,4 +1,5 @@
 import { useWallet } from "../hooks/useWallet";
+import React from "react";
 
 export function ConnectWallet() {
   const { connect, isConnected, address, error } = useWallet();
